@@ -533,7 +533,7 @@
                 <!-- O ID do vídeo será manipulado pelo JS para trocar o tema -->
                 <div class="iframe-container">
                     <iframe id="youtube-video"
-                        src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO?enablejsapi=1&rel=0&modestbranding=1"
+                        src="https://www.youtube.com/embed/Gqo0cObemCA?enablejsapi=1&rel=0&modestbranding=1"
                         title="Apresentação Jonas Afonso" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
@@ -713,7 +713,6 @@
             .pauseFor(1500)
             .start();
 
-        // Função ÚNICA do Modo Tático
         function toggleTactical() {
             const isTactical = document.body.classList.toggle('tactical-active');
             const btn = document.querySelector('.btn-pressure');
@@ -726,7 +725,6 @@
                 label.style.color = "var(--tactical-accent)";
                 document.body.style.borderLeft = "5px solid var(--tactical-accent)";
 
-                // Efeito visual no vídeo do YouTube (Modo Tático)
                 if (videoFrame) videoFrame.style.filter = "contrast(1.2) saturate(1.1)";
             } else {
                 btn.innerHTML = "E SE O PLANO FALHAR?";
@@ -734,7 +732,6 @@
                 label.style.color = "var(--primary)";
                 document.body.style.borderLeft = "none";
 
-                // Volta vídeo ao normal
                 if (videoFrame) videoFrame.style.filter = "none";
             }
         }
