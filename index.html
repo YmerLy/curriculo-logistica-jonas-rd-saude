@@ -498,6 +498,57 @@
         body.tactical-active .status-label {
             color: var(--tactical-accent);
         }
+
+        /* Container dos botões em coluna */
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* Alinha os botões à esquerda */
+            gap: 15px;
+            /* Espaço entre os botões */
+            margin-top: 25px;
+        }
+
+        /* Novo estilo para o botão de Currículo */
+        .btn-cv {
+            background-color: var(--primary);
+            /* Azul Corporativo */
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 74, 153, 0.2);
+            border: 2px solid transparent;
+        }
+
+        .btn-cv:hover {
+            background-color: var(--accent);
+            /* Muda para amarelo no hover para destaque */
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ajuste do botão no MODO TÁTICO */
+        body.tactical-active .btn-cv {
+            background-color: transparent;
+            color: #eee;
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: none;
+        }
+
+        body.tactical-active .btn-cv:hover {
+            background-color: #eee;
+            color: var(--tactical-bg);
+            border-color: #eee;
+        }
     </style>
 </head>
 
@@ -511,13 +562,18 @@
                 <div id="typewriter"></div>
 
                 <p style="font-size: 1.1rem; max-width: 550px;">
-                    Especialista em Logística de Alta Performance. Liderança focada em <strong>KPIs, OTIF e Gestão de
-                        Crise</strong>.
+                    Liderança focada em <strong>KPIs e OTIF</strong>.
                     Pronto para garantir a eficiência operacional da <strong>RD Saúde</strong> em qualquer lugar do
                     Brasil.
                 </p>
 
-                <button class="btn-pressure" onclick="toggleTactical()">E SE O PLANO FALHAR?</button>
+                <div class="actions-container">
+                    <button class="btn-pressure" onclick="toggleTactical()">E SE O PLANO FALHAR?</button>
+
+                    <a href="curriculo.html" class="btn-cv" target="_blank">
+                        <i class="fas fa-file-download"></i> ACESSAR CURRÍCULO FORMAL
+                    </a>
+                </div>
             </div>
 
             <div class="photo-frame">
